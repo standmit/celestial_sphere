@@ -1,0 +1,41 @@
+<sdf version="1.6">
+    <model name="celestial_sphere">
+        <static>1</static>
+        <pose>0 0 0 0 0 0</pose>
+        <link name="link">
+            <visual name="visual">
+                <cast_shadows>0</cast_shadows>
+                <pose>0 0 0 0 0 0</pose>
+                <geometry>
+                    <mesh>
+                        <uri>file://celestial_sphere/celestial_sphere.dae</uri>
+                        <scale>100 100 100</scale>
+                    </mesh>
+                </geometry>
+                <material>
+                    <script>
+                        <uri>model://celestial_sphere/materials/scripts/</uri>
+                        <uri>model://celestial_sphere/materials/textures/</uri>
+                        <name>celestial_sphere</name>
+                    </script>
+                    <shader type="normal_map_tangent_space">
+                        <normal_map>file://celestial_sphere/materials/textures/normal.png</normal_map>
+                    </shader>
+                </material>
+            </visual>
+            <inertial>
+                <mass>100</mass>
+                <inertia>
+                    <ixx>40</ixx>
+                    <ixy>0</ixy>
+                    <ixz>0</ixz>
+                    <iyy>40</iyy>
+                    <iyz>0</iyz>
+                    <izz>40</izz>
+                </inertia>
+            </inertial>
+            <self_collide>0</self_collide>
+            <kinematic>0</kinematic>
+        </link>
+    </model>
+</sdf>

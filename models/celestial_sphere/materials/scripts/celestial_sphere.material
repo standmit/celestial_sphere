@@ -1,0 +1,9 @@
+material celestial_sphere {
+    technique {
+        pass {
+            texture_unit  {
+                texture starmap_2020_8k.exr
+            }
+        }
+    }
+}

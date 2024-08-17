@@ -1,0 +1,17 @@
+<launch>
+    <param name="/use_sim_time" value="true" />
+
+    <node
+            name="gazebo"
+            pkg="gazebo_ros"
+            type="gzserver"
+            args="-e ode --verbose $(find celestial_sphere)/worlds/celestial_sphere.world"
+            required="true"
+            output="screen"
+    >
+        <param name="enable_ros_network" value="true" />
+    </node>
+
+    <node name="gazebo_gui" pkg="gazebo_ros" type="gzclient" args="--verbose" required="true" output="screen" />
+
+</launch>

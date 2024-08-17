@@ -1,0 +1,1 @@
+models/celestial_sphere/materials/textures/starmap_2020_8k.exr filter=lfs diff=lfs merge=lfs -text

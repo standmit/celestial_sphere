@@ -1,0 +1,39 @@
+<sdf version="1.6">
+    <world name="celestial_sphere">
+        <gravity>0 0 0</gravity>
+        <magnetic_field>0 0 0</magnetic_field>
+        <atmoshpere type="adiabatic" />
+        <gui fullscreen="0">
+            <camera name="camera">
+                <pose>0 0 0 0 -1.57 0</pose>
+                <view_controller>orbit</view_controller>
+                <projection_type>perspective</projection_type>
+            </camera>
+        </gui>
+        <physics name="default_physics" default="0" type="ode">
+            <max_step_size>0.001</max_step_size>
+            <real_time_factor>1</real_time_factor>
+            <real_time_update_rate>1000</real_time_update_rate>
+        </physics>
+        <scene>
+            <ambient>1 1 1 1</ambient>
+            <background>0 0 0 1</background>
+            <shadows>0</shadows>
+            <grid>0</grid>
+            <origin_visual>1</origin_visual>
+        </scene>
+        <spherical_coordinates>
+            <surface_model>EARTH_WGS84</surface_model>
+            <world_frame_orientation>ENU</world_frame_orientation>
+            <latitude_deg>0</latitude_deg>
+            <longitude_deg>0</longitude_deg>
+            <elevation>0</elevation>
+            <heading_deg>0</heading_deg>
+        </spherical_coordinates>
+
+        <include>
+            <uri>model://celestial_sphere</uri>
+            <pose>0 0 0 0 0 0</pose>
+        </include>
+    </world>
+</sdf>
