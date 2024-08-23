@@ -1,7 +1,17 @@
+fragment_program just_texture glsl {
+    source just_texture.frag
+
+    default_params {
+        param_named diffuse_map int 0
+    }
+}
+
 material celestial_sphere {
     technique {
         pass {
-            texture_unit  {
+            fragment_program_ref just_texture { }
+
+            texture_unit diffuseMap {
                 texture starmap_2020_8k.exr
                 scale -1 1
             }

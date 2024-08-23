@@ -16,7 +16,7 @@
             <real_time_update_rate>1000</real_time_update_rate>
         </physics>
         <scene>
-            <ambient>1 1 1 1</ambient>
+            <ambient>0 0 0 1</ambient>
             <background>0 0 0 1</background>
             <shadows>0</shadows>
             <grid>0</grid>
