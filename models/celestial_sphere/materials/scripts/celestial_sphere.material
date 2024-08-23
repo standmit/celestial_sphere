@@ -3,6 +3,7 @@ material celestial_sphere {
         pass {
             texture_unit  {
                 texture starmap_2020_8k.exr
+                scale -1 1
             }
         }
     }
